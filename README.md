@@ -33,11 +33,11 @@ The jar file will be created in `./build/libs/`.
 For the basics of running Synthea, please refer to [Basic Setup and Running](https://github.com/synthetichealth/synthea/wiki/Basic-Setup-and-Running)
 or [Developer Setup and Running](https://github.com/synthetichealth/synthea/wiki/Developer-Setup-and-Running) on the Synthea wiki.
 
-If you are using the "Basic Setup" of Synthea, add your .jar file to the classpath and run Synthea as follows:
+If you are using the "Basic Setup" of Synthea, you will need to use an alternative startup command to load both the Synthea JAR and exporter JAR into the classpath, and run Synthea:
 
 
 ```sh
-java -jar synthea-with-dependencies.jar -cp path/to/custom-exporter-template.jar
+java -cp path/to/custom-exporter-template.jar:synthea-with-dependencies.jar App
 ```
 
 Other options may be appended to the end of the command as usual.
@@ -47,7 +47,7 @@ If you are using the "Developer Setup" of Synthea, add your .jar to its `./lib/c
 
 ## License
 
-Copyright 2023 The MITRE Corporation
+Copyright 2023-2025 The MITRE Corporation
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -60,3 +60,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
